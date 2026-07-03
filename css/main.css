@@ -313,6 +313,7 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-soft);
 }
+
 .subnav__list {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -321,19 +322,27 @@ img { max-width: 100%; display: block; }
   gap: 4px;
   overflow-x: auto;
 }
+
 .subnav__list li a {
   display: inline-block;
   padding: 16px 14px;
   font-size: 13.5px;
   color: var(--text-dim);
   white-space: nowrap;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid transparent; /* 기본 상태는 투명한 보더 */
   transition: color .2s ease, border-color .2s ease;
 }
+
+/* 활성화 및 호버 상태 */
 .subnav__list li.is-active a,
 .subnav__list li a:hover {
   color: var(--text);
-  border-color: var(--red-1);
+  border-color: var(--red-1); /* 활성화된 상태의 컬러 */
+}
+
+/* 추가: 활성화되었을 때 글씨를 조금 더 강조하고 싶다면 아래 속성 추가 */
+.subnav__list li.is-active a {
+  font-weight: 700; 
 }
 
 /* ============ INTRO ============ */
