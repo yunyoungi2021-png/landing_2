@@ -86,6 +86,7 @@ img { max-width: 100%; display: block; }
 
 .gnb {
   display: flex;
+  justify-content: center;
   gap: 6px;
   flex: 1;
 }
