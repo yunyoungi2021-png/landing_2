@@ -90,14 +90,6 @@ img { max-width: 100%; display: block; }
   height: 20px; /* 두 로고의 시각적인 균형을 맞추기 위해 kt cloud 로고의 높이만 따로 조절할 수 있습니다. */
 }
 
-/* 로고 사이의 구분선 (선택 사항) */
-.logo__divider {
-  width: 1px;
-  height: 14px;
-  background-color: #555; /* 어두운 배경에 어울리는 색상 지정 */
-  margin: 0 4px;
-}
-
 .gnb {
   display: flex;
   justify-content: center;
