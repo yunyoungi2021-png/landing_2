@@ -71,18 +71,32 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 32px;
 }
-.logo { display: flex; align-items: center; gap: 8px; font-weight: 800; }
-.logo__mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px; height: 26px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, var(--red-1), var(--red-2));
-  font-size: 13px;
-  font-weight: 800;
+/* 로고 컨테이너 */
+.logo { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; /* 로고 간 간격 설정 */
 }
-.logo__text { font-size: 15px; letter-spacing: 0.02em; }
+
+/* 이미지 로고 기본 스타일 */
+.logo__img {
+  height: 24px; /* 캡처 이미지에 맞게 적절한 높이로 변경 (예: 24px, 30px 등) */
+  width: auto;  /* 원본 이미지 비율 유지 */
+  object-fit: contain;
+}
+
+/* kt cloud 로고 크기 미세 조정 (필요시) */
+.logo__img.ktcloud {
+  height: 20px; /* 두 로고의 시각적인 균형을 맞추기 위해 kt cloud 로고의 높이만 따로 조절할 수 있습니다. */
+}
+
+/* 로고 사이의 구분선 (선택 사항) */
+.logo__divider {
+  width: 1px;
+  height: 14px;
+  background-color: #555; /* 어두운 배경에 어울리는 색상 지정 */
+  margin: 0 4px;
+}
 
 .gnb {
   display: flex;
