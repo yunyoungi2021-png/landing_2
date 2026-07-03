@@ -435,53 +435,82 @@ img { max-width: 100%; display: block; }
   height: 16px;
 }
 
-.curriculum__tabs {
+/* ============ CURRICULUM DROPDOWN ============ */
+.curriculum-dropdowns {
   max-width: var(--max-w);
   margin: 0 auto 34px;
   display: flex;
-  gap: 16px;
-  padding-left: 0;
+  gap: 20px;
   flex-wrap: wrap;
 }
-.curriculum__tab {
-  min-width: 245px;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-align: left;
-  padding: 12px 20px;
-  border-radius: 12px;
-  color: rgba(255, 255, 255, 0.48);
-  font-size: 14.5px;
-  line-height: 1.2;
-  background: #24252b;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
-}
-.curriculum__tab strong {
-  color: #ec1c24;
-  font-size: 1em;
-}
-.curriculum__tab span { font-weight: 600; }
-.curriculum__tab .chev {
-  width: 9px;
-  height: 9px;
-  margin-left: auto;
-  color: rgba(255, 255, 255, 0.58);
-}
-.curriculum__tab.is-active { color: rgba(255, 255, 255, 0.48); }
-.curriculum__tab-dot {
-  width: 8px;
-  height: 8px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: #ec1c24;
-  box-shadow: 0 0 0 6px rgba(236, 28, 36, 0.16);
-}
-.curriculum__tab:not(.is-active) span:not(.curriculum__tab-dot) {
-  color: #ec1c24;
+
+.dropdown {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
 }
 
+/* 기존 .curriculum__tab 스타일을 .dropdown-header로 계승 */
+.dropdown-header {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #24252b;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14.5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 화살표 아이콘 스타일 */
+.dropdown-header::after {
+  content: "▼";
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.58);
+}
+.dropdown.is-open .dropdown-header::after { content: "▲"; }
+
+/* 드롭다운 리스트 */
+.dropdown-list {
+  display: none;
+  list-style: none;
+  padding: 10px 20px;
+  margin-top: 8px;
+  background: #24252b;
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.dropdown.is-open .dropdown-list { display: block; }
+
+/* 리스트 아이템 스타일 */
+.dropdown-item {
+  padding: 12px 0;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+/* 마우스 올렸을 때 */
+.dropdown-item:hover { color: #fff; }
+
+/* 선택되었을 때 (빨간색) */
+.dropdown-item.is-selected { 
+  color: #ec1c24; 
+  font-weight: 700; 
+}
+.dropdown-item.is-selected::before { 
+  content: "● "; 
+  font-size: 8px; 
+  margin-right: 8px; 
+}
 .curriculum__body {
   position: relative;
   max-width: var(--max-w);
