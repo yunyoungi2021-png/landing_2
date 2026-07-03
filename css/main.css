@@ -283,7 +283,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 6px;
 }
-.plus { font-weight: 800; }
+.plus { font-weight: 800; color: rgba(236, 28, 36, 0.8); }
 
 /* ============ SUBNAV ============ */
 .subnav {
