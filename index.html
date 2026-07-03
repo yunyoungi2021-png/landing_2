@@ -137,39 +137,40 @@
   </div>
 
   <div class="curriculum__tabs">
-    <button class="curriculum__tab is-active">1개월<br><span>통합 프로덕트 디자인과 관리</span></button>
-    <button class="curriculum__tab">2단계<br><span>디자인 프로세스 관리</span></button>
+    <button class="curriculum__tab is-active"><strong>1개월</strong><span>통합 프로덕트 디자인과 관리</span><i class="chev"></i></button>
+    <button class="curriculum__tab"><span class="curriculum__tab-dot"></span><span>디자인 프로세스 관리</span><i class="chev"></i></button>
   </div>
 
   <div class="curriculum__body">
+    <button class="curriculum__arrow curriculum__arrow--prev" aria-label="이전 커리큘럼">
+      <svg width="34" height="52" viewBox="0 0 34 52" fill="none"><path d="M27 4 7 26l20 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
     <div class="curriculum__visual">
-      <div class="visual-slide">
-        <span class="visual-slide__eyebrow">Plug into Expertise</span>
-        <p class="visual-slide__title">전문 강사 경험을 접하다</p>
-        <div class="visual-slide__mockup"></div>
-        <span class="visual-slide__caption">MicroSoftBee 웨빙 기술</span>
-      </div>
-      <div class="curriculum__thumbs">
-        <span class="thumb is-active"></span>
-        <span class="thumb"></span>
-        <span class="thumb"></span>
-        <span class="thumb"></span>
-      </div>
+      <img src="./assets/images/curriculum-preview.png" alt="온라인 강의 화면 예시" />
     </div>
 
     <div class="curriculum__detail">
       <p class="curriculum__detail-desc">디자인 요구사항 분석과 산출물 관리, 협업 및 리뷰 시스템을 체계적으로 운영하는 방법을 익힙니다.</p>
+      <div class="curriculum__chips">
+        <span>사용자 리서치</span>
+        <span>논리적 문제정의</span>
+      </div>
       <ol class="curriculum__steps">
-        <li class="step"><span class="step__type step__type--lecture">강의</span>디자인 리서치, 인터뷰 이론</li>
-        <li class="step"><span class="step__type step__type--practice">실습</span>인뎁스 인터뷰 실습</li>
-        <li class="step"><span class="step__type step__type--feedback">피드백</span>강사 피드백</li>
-        <li class="step"><span class="step__type step__type--practice">실습</span>인터뷰 보완, 어피니티 다이어그램, 페르소나, 고객여정지도 실습</li>
-        <li class="step"><span class="step__type step__type--feedback">피드백</span>강사 피드백</li>
-        <li class="step"><span class="step__type step__type--lecture">강의</span>설문조사 이론 및 실습, 인사이트 도출</li>
-        <li class="step"><span class="step__type step__type--lecture">강의</span>프로젝트 문서, 기능명세서 이론 및 실습</li>
-        <li class="step"><span class="step__type step__type--practice">실습</span>랜딩페이지 리디자인 실습</li>
+        <li class="step">디자인 리서치, 인터뷰 이론</li>
+        <li class="step">인뎁스 인터뷰 실습</li>
+        <li class="step step--active">강사 피드백</li>
+        <li class="step">인터뷰 보완, 어피니티 다이어그램, 페르소나, 고객여정지도 실습</li>
+        <li class="step step--active">강사 피드백</li>
+        <li class="step">설문조사 이론 및 실습, 인사이트 도출</li>
+        <li class="step">프로젝트 문서, 기능명세서 이론 및 실습</li>
+        <li class="step">랜딩페이지 리디자인 실습</li>
       </ol>
     </div>
+
+    <button class="curriculum__arrow curriculum__arrow--next" aria-label="다음 커리큘럼">
+      <svg width="34" height="52" viewBox="0 0 34 52" fill="none"><path d="m7 4 20 22L7 48" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
 
   <div class="curriculum__dots">
