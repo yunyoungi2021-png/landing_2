@@ -136,10 +136,34 @@
     </a>
   </div>
 
-  <div class="curriculum__tabs">
-    <button class="curriculum__tab is-active"><strong>1개월</strong><span>통합 프로덕트 디자인과 관리</span><i class="chev"></i></button>
-    <button class="curriculum__tab"><span class="curriculum__tab-dot"></span><span>디자인 프로세스 관리</span><i class="chev"></i></button>
+  <div class="curriculum-container">
+  <!-- 첫 번째 드롭다운 -->
+  <div class="dropdown" id="dropdown1">
+    <button class="dropdown-header">
+      <span class="header-text">1개월 통합 프로덕트 디자인과 관리</span>
+      <i class="arrow"></i>
+    </button>
+    <ul class="dropdown-list">
+      <li class="dropdown-item is-selected">1개월 통합 프로덕트 디자인과 관리</li>
+      <li class="dropdown-item">2개월 최신 디자인 전략과 사용자 리서치</li>
+      <li class="dropdown-item">3개월 기본 프로젝트 시작</li>
+      <!-- ...나머지 항목 -->
+    </ul>
   </div>
+
+  <!-- 두 번째 드롭다운 -->
+  <div class="dropdown" id="dropdown2">
+    <button class="dropdown-header">
+      <span class="header-text">디자인 프로세스 관리</span>
+      <i class="arrow"></i>
+    </button>
+    <ul class="dropdown-list">
+      <li class="dropdown-item is-selected">오리엔테이션</li>
+      <li class="dropdown-item">프로덕트 디자인</li>
+      <!-- ...나머지 항목 -->
+    </ul>
+  </div>
+</div>
 
   <div class="curriculum__body">
     <button class="curriculum__arrow curriculum__arrow--prev" aria-label="이전 커리큘럼">
