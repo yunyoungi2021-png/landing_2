@@ -718,11 +718,14 @@ img { max-width: 100%; display: block; }
 .process__footnotes li { font-size: 11.5px; color: var(--text-dimmer); line-height: 1.7; }
 
 /* ============ FOOTER ============ */
+/* 푸터 전체 레이아웃 */
 .footer {
   border-top: 1px solid var(--line-soft);
   background: var(--bg-soft);
   padding: 60px 24px 40px;
 }
+
+/* 푸터 상단 영역 */
 .footer__top {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -732,6 +735,15 @@ img { max-width: 100%; display: block; }
   padding-bottom: 40px;
   border-bottom: 1px solid var(--line-soft);
 }
+
+/* 1번 로고 (kt techup) 스타일 */
+.logo--footer .logo__img {
+  height: 26px; /* 캡처 이미지에 맞춰 높이 조절 */
+  width: auto;
+  object-fit: contain;
+}
+
+/* TOP 버튼 */
 .to-top {
   display: flex;
   align-items: center;
@@ -745,6 +757,7 @@ img { max-width: 100%; display: block; }
 }
 .to-top:hover { color: var(--text); border-color: var(--line); background: rgba(255,255,255,0.04); }
 
+/* 푸터 컬럼 영역 */
 .footer__cols {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -759,6 +772,7 @@ img { max-width: 100%; display: block; }
 .footer__col a { font-size: 13px; color: var(--text-dim); }
 .footer__col a:hover { color: var(--text); }
 
+/* 푸터 하단 영역 */
 .footer__bottom {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -774,7 +788,18 @@ img { max-width: 100%; display: block; }
 .footer__cs { font-size: 11.5px; color: var(--text-dimmer); }
 .footer__desc { margin-top: 12px; font-size: 11.5px; color: var(--text-dimmer); }
 .footer__copyright { margin-top: 4px; font-size: 11px; color: var(--text-dimmer); }
-.footer__brand { font-size: 20px; font-weight: 800; color: var(--text-dim); }
+
+/* 2번 로고 (kt cloud) 컨테이너 및 이미지 스타일 */
+.footer__brand { 
+  display: flex; 
+  align-items: center; 
+}
+
+.footer__brand-img { 
+  height: 20px; /* 2번 로고 높이 조절 */
+  width: auto;
+  object-fit: contain;
+}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
