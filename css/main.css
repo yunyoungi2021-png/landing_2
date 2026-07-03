@@ -268,7 +268,7 @@ img { max-width: 100%; display: block; }
 .benefit-card__label { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.9); }
 .benefit-card__value { margin-top: 10px; font-size: clamp(19px, 2.4vw, 24px); font-weight: 800; color: rgba(255,255,255,0.9); line-height: 1.4; }
 .benefit-card__value em { font-style: normal; color: #EC1C24; }
-.benefit-card__note { margin-top: 14px; font-size: 11.5px; color: rgba(20,20,25,0.62); max-width: 280px; }
+.benefit-card__note { margin-top: 14px; font-size: 11.5px; color: rgba(255,255,255,0.8); max-width: 280px; }
 .benefit-card__more {
   align-self: flex-start;
   margin-top: 16px;
