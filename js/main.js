@@ -30,3 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // 각 섹션을 관찰 대상으로 지정
   sections.forEach((section) => observer.observe(section));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // 드롭다운 토글 기능
+  document.querySelectorAll(".dropdown-header").forEach(header => {
+    header.addEventListener("click", () => {
+      header.parentElement.classList.toggle("is-open");
+    });
+  });
+
+  // 항목 선택 기능
+  document.querySelectorAll(".dropdown-item").forEach(item => {
+    item.addEventListener("click", (e) => {
+      // 해당 드롭다운 내부의 모든 항목에서 선택 해제
+      const parentList = item.parentElement;
+      parentList.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("is-selected"));
+      
+      // 클릭한 항목 선택
+      item.classList.add("is-selected");
+    });
+  });
+});
