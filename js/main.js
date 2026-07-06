@@ -31,21 +31,47 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section));
 });
 document.addEventListener("DOMContentLoaded", () => {
-  // 드롭다운 토글 기능
+ /* =========================================
+     2. 커리큘럼 드롭다운 기능 (수정됨)
+  ========================================= */
+  // 드롭다운 열기/닫기 토글
   document.querySelectorAll(".dropdown-header").forEach(header => {
     header.addEventListener("click", () => {
       header.parentElement.classList.toggle("is-open");
     });
   });
 
-  // 항목 선택 기능
+  // 항목 선택 및 버튼 텍스트 변경
   document.querySelectorAll(".dropdown-item").forEach(item => {
     item.addEventListener("click", (e) => {
-      // 해당 드롭다운 내부의 모든 항목에서 선택 해제
+      const dropdown = item.closest(".dropdown");
       const parentList = item.parentElement;
+      const headerWrap = dropdown.querySelector(".header-text-wrap");
+
+      // 1. 기존 선택된 항목 해제 후, 클릭한 항목에만 is-selected 적용
       parentList.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("is-selected"));
-      
-      // 클릭한 항목 선택
+      item.classList.add("is-selected");
+
+      // 2. 클릭된 항목의 텍스트 가져오기
+      const selectedText = item.textContent.trim();
+
+      // 3. 텍스트 형태에 따라 헤더 디자인(빨간색 포인트) 적용하여 변경
+      if (selectedText.match(/^\d+개월/)) {
+        // '1개월' 등 "숫자+개월"로 시작하는 경우 (첫 번째 단어를 빨간색으로)
+        const parts = selectedText.split(' ');
+        const month = parts.shift(); // 첫 단어 분리 (예: 1개월)
+        const rest = parts.join(' '); // 나머지 텍스트
+        headerWrap.innerHTML = `<span class="text-red">${month}</span><span>${rest}</span>`;
+      } else {
+        // 그 외의 경우 (빨간색 점 추가)
+        headerWrap.innerHTML = `<span class="text-red" style="font-size: 10px;">●</span><span>${selectedText}</span>`;
+      }
+
+      // 4. 선택 완료 후 드롭다운 메뉴 닫기
+      dropdown.classList.remove("is-open");
+    });
+  });
+});
       item.classList.add("is-selected");
     });
   });
