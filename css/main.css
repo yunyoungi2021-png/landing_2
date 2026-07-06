@@ -965,3 +965,22 @@ img { max-width: 100%; display: block; }
 .subsidy-table th, .subsidy-table td { border: 1px solid #444; padding: 10px; }
 .subsidy-table th { background: #333; color: #fff; }
 .table-footnote { font-size: 11px; color: #888; margin-top: 15px; line-height: 1.4; }
+.info-card { position: relative; } /* 자식 팝업의 기준점 */
+
+.tooltip-popup {
+  display: none; /* 기본 숨김 */
+  position: absolute;
+  top: -70px; /* 카드 위쪽으로 배치 */
+  left: 0;
+  background: #24252b;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 100;
+}
+.tooltip-popup.is-open { display: block; }
+.tooltip-close { margin-left: 10px; cursor: pointer; border: none; background: none; color: #888; }
+.tooltip-trigger { cursor: pointer; border: none; background: none; color: inherit; }
