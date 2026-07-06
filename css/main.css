@@ -1024,4 +1024,20 @@ img { max-width: 100%; display: block; }
   background: none; 
   color: inherit; 
   padding: 0;
+}/* 다크 모드 스타일 정의 */
+body.dark-mode {
+  background-color: #17171c; /* 배경을 어둡게 */
+  color: #ffffff;           /* 글자색을 밝게 */
+}
+
+/* 다크 모드일 때 버튼 색상 조정 (선택 사항) */
+body.dark-mode .header {
+  background-color: #000;
+  border-bottom: 1px solid #333;
+}
+
+/* 테마 버튼 클릭 시 아이콘 회전 효과 (달/해 아이콘처럼 보이게) */
+body.dark-mode .icon-btn svg {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
 }
