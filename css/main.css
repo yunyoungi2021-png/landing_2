@@ -959,3 +959,9 @@ img { max-width: 100%; display: block; }
   max-width: 600px; width: 90%; position: relative;
 }
 .modal-close { position: absolute; top: 20px; right: 20px; cursor: pointer; border: none; background: none; color: #fff; font-size: 24px; }
+.subsidy-table-wrapper { margin-top: 20px; font-size: 13px; color: #ccc; }
+.table-title { font-size: 14px; margin-bottom: 10px; color: #fff; }
+.subsidy-table { width: 100%; border-collapse: collapse; text-align: center; }
+.subsidy-table th, .subsidy-table td { border: 1px solid #444; padding: 10px; }
+.subsidy-table th { background: #333; color: #fff; }
+.table-footnote { font-size: 11px; color: #888; margin-top: 15px; line-height: 1.4; }
