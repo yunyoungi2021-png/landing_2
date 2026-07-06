@@ -227,21 +227,16 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
-/* 기존 .info-card 코드를 아래 코드로 덮어씌워 주세요 */
 .info-card {
-  /* flex: 1;  <-- 기존에 있던 이 속성을 삭제하여 강제 비율 할당을 없앱니다. */
-  /* min-width: 180px; <-- (있다면) 이 속성도 삭제하여 '50명' 카드가 작아질 수 있게 합니다. */
-  
-  width: max-content; /* 내부 글자 길이에 딱 맞게 너비 조절 */
-  flex-shrink: 0; /* 화면이 좁아져도 카드의 내용물이 찌그러지지 않도록 보호 */
-  
-  /* 아래는 기존 디자인 유지를 위한 속성 (원래 코드에 맞춰 유지) */
-  background: rgba(3, 3, 4, 0.6); 
+  background: rgba(15, 15, 18, 0.7);
+  border: 1px solid var(--line);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 20px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
 }
 .info-card__label {
   display: inline-flex;
