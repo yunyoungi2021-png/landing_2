@@ -225,7 +225,7 @@ img { max-width: 100%; display: block; }
   padding: 0 24px 80px;
   display: flex;
   /* 카드들을 왼쪽부터 순서대로 정렬 */
-  justify-content: flex-start;
+  justify-content: center;
   
   /* 간격 유지 */
   gap: 14px;
