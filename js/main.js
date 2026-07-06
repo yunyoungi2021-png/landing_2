@@ -109,3 +109,23 @@ if (close) {
     popup.classList.remove('is-open');
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // 로컬 스토리지 확인하여 초기 테마 설정
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // 현재 상태 저장
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+});
