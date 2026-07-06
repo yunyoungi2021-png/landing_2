@@ -73,3 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// 기존 main.js에 추가
+const modal = document.getElementById('subsidyModal');
+const btnDetail = document.querySelector('.btn-detail'); // '자세히 보기' 버튼 클래스명 확인 필요
+const btnClose = document.querySelector('.modal-close');
+
+// 열기
+if (btnDetail) {
+  btnDetail.addEventListener('click', () => modal.classList.add('is-open'));
+}
+
+// 닫기
+if (btnClose) {
+  btnClose.addEventListener('click', () => modal.classList.remove('is-open'));
+}
+
+// 배경 클릭 시 닫기
+window.addEventListener('click', (e) => {
+  if (e.target === modal) modal.classList.remove('is-open');
+});
