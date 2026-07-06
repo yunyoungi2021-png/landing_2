@@ -113,19 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
 
-  // 로컬 스토리지 확인하여 초기 테마 설정
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
+  // 페이지 로드 시 상태 복원
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
   }
 
   themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
     
-    // 현재 상태 저장
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
+    // 상태 저장
+    if (body.classList.contains('light-mode')) {
       localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
     }
   });
 });
