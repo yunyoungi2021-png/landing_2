@@ -227,6 +227,7 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
+/* .info-card 앞에 점(.)을 추가하여 클래스 선택자로 수정 */
 .info-card {
   background: rgba(15, 15, 18, 0.7);
   border: 1px solid var(--line);
@@ -237,7 +238,13 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   gap: 8px;
   text-align: left;
+  
+  /* 카드 폭을 내부 요소 길이에 맞춤 */
+  width: fit-content;
+  /* 가로로 나열될 때 카드들이 찌그러지지 않도록 설정 */
+  flex-shrink: 0;
 }
+
 .info-card__label {
   display: inline-flex;
   align-items: center;
@@ -245,12 +252,19 @@ img { max-width: 100%; display: block; }
   font-size: 12.5px;
   color: var(--text-dim);
 }
+
 .info-card__icon {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
 }
-.info-card__value { font-size: 15px; font-weight: 700; }
+
+.info-card__value { 
+  font-size: 15px; 
+  font-weight: 700; 
+  /* 필요시 white-space: nowrap;을 추가하면 텍스트가 줄바꿈 없이 한 줄로 유지됩니다 */
+  white-space: nowrap; 
+}
 
 /* ============ BENEFITS ============ */
 .benefits {
