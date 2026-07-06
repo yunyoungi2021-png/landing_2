@@ -78,7 +78,8 @@
     <div class="benefit-card benefit-card--a">
       <span class="benefit-card__label">훈련 장려금</span>
       <strong class="benefit-card__value">월 최대 <em>300,000</em>원 지원</strong>
-      <button class="benefit-card__more">
+      <!-- 1. 버튼에 btn-detail 클래스 추가 -->
+      <button class="benefit-card__more btn-detail">
         <span class="plus">+</span> 자세히 보기
       </button>
     </div>
@@ -89,62 +90,63 @@
     </div>
   </div>
 </section>
-<div class="modal-body">
-  <div class="subsidy-table-wrapper">
-    <h3 class="table-title">훈련 장려금 예시 (훈련장려금 + 특별훈련수당 합산 기준 예시)</h3>
-    <table class="subsidy-table">
-      <thead>
-        <tr>
-          <th>단위기간</th>
-          <th>단위기간 일수</th>
-          <th>훈련생</th>
-          <th>출석일</th>
-          <th>출석률</th>
-          <th>장려금</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="4">2025. 02. 27 - 2025. 03. 26</td>
-          <td rowspan="4">22일</td>
-          <td>A</td>
-          <td>10일</td>
-          <td>45%</td>
-          <td>제적 (단위기간 내 50% 이상 결석)</td>
-        </tr>
-        <tr>
-          <td>B</td>
-          <td>17일</td>
-          <td>77%</td>
-          <td>미지급 (단위기간 내 80% 미만 수강)</td>
-        </tr>
-        <tr>
-          <td>C</td>
-          <td>18일</td>
-          <td>81%</td>
-          <td>18일 * 15,000 = 270,000원</td>
-        </tr>
-        <tr>
-          <td>D</td>
-          <td>22일</td>
-          <td>100%</td>
-          <td>20일 * 15,000 = 300,000원</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="table-footnote">
-      ※ 실제 지급 금액과 상이 할 수 있으며, 출석률 80% 이상 시 월 최대 30만원 수준의 장려금이 지급될 수 있습니다.<br>
-      ※ 단위기간 일수가 20일 미만일 경우에는 최대 지급 금액이 변경됩니다.
-    </p>
-  </div>
-</div>
+
+<!-- 2. 모달 구조 시작 -->
 <div id="subsidyModal" class="modal">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
     <h2>KDT 훈련 장려금</h2>
     <p>단위기간 출석률 80% 이상 달성 시, 단위기간별 훈련장려금과 K-디지털 트레이닝 특별훈련수당을 지원받을 수 있습니다.</p>
+    
+    <!-- 3. 표 내용을 모달 안으로 이동시켰습니다 -->
     <div class="modal-body">
-      <!-- 이 부분에 사진 속 리스트와 표를 HTML로 구현하시면 됩니다 -->
+      <div class="subsidy-table-wrapper">
+        <h3 class="table-title">훈련 장려금 예시 (훈련장려금 + 특별훈련수당 합산 기준 예시)</h3>
+        <table class="subsidy-table">
+          <thead>
+            <tr>
+              <th>단위기간</th>
+              <th>단위기간 일수</th>
+              <th>훈련생</th>
+              <th>출석일</th>
+              <th>출석률</th>
+              <th>장려금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4">2025. 02. 27 - 2025. 03. 26</td>
+              <td rowspan="4">22일</td>
+              <td>A</td>
+              <td>10일</td>
+              <td>45%</td>
+              <td>제적 (단위기간 내 50% 이상 결석)</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>17일</td>
+              <td>77%</td>
+              <td>미지급 (단위기간 내 80% 미만 수강)</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>18일</td>
+              <td>81%</td>
+              <td>18일 * 15,000 = 270,000원</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>22일</td>
+              <td>100%</td>
+              <td>20일 * 15,000 = 300,000원</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-footnote">
+          ※ 실제 지급 금액과 상이 할 수 있으며, 출석률 80% 이상 시 월 최대 30만원 수준의 장려금이 지급될 수 있습니다.<br>
+          ※ 단위기간 일수가 20일 미만일 경우에는 최대 지급 금액이 변경됩니다.
+        </p>
+      </div>
     </div>
   </div>
 </div>
