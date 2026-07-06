@@ -700,6 +700,27 @@ img { max-width: 100%; display: block; }
   background: rgba(23, 23, 28, 0.06);
   color: rgba(23, 23, 28, 0.48);
 }
+/* 기존 .career-list li 코드를 아래와 같이 수정 */
+.career-list li { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  font-size: 13.5px; 
+  color: rgba(23, 23, 28, 0.68); 
+}
+
+/* 링크 태그에 대한 스타일 추가 */
+.career-list li a {
+  color: inherit; /* li의 부모로부터 색상을 상속받음 */
+  text-decoration: none; /* 밑줄 제거 */
+  transition: color 0.2s;
+}
+
+/* 링크에 마우스를 올렸을 때 효과 */
+.career-list li a:hover {
+  color: var(--red-2); /* 호버 시 빨간색 강조 */
+  text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
 .career-tag--now { background: rgba(255, 59, 48, 0.16); color: var(--red-2); }
 .instructor__footnote {
   max-width: var(--max-w);
