@@ -57,7 +57,18 @@
       <span class="info-card__value">26.4.9 (목) - 26.5.25 (월)</span>
     </div>
     <div class="info-card">
-      <span class="info-card__label">교육 일정 <img class="info-card__icon" src="./assets/images/icon-information.png" alt="" /></span>
+      <div class="info-card__label">
+    교육 일정 
+    <button type="button" class="tooltip-trigger" id="eduInfoTrigger">
+      <img class="info-card__icon" src="./assets/images/icon-information.png" alt="정보 보기" />
+    </button>
+  </div>
+  <!-- 팝업창 HTML을 카드 내부에 추가 -->
+  <div class="tooltip-popup" id="eduInfoPopup">
+    교육 시간 : 평일 오전 9시 ~ 오후 18시 
+    <button type="button" class="tooltip-close" id="eduInfoClose">&times;</button>
+    <br> / 공휴일, 방학기간 등 제외
+  </div>
       <span class="info-card__value">26.6.10 (수) - 26.12.23 (수)</span>
     </div>
     <div class="info-card">
