@@ -92,3 +92,20 @@ if (btnClose) {
 window.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('is-open');
 });
+const trigger = document.getElementById('eduInfoTrigger');
+const popup = document.getElementById('eduInfoPopup');
+const close = document.getElementById('eduInfoClose');
+
+if (trigger) {
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.add('is-open');
+  });
+}
+
+if (close) {
+  close.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.remove('is-open');
+  });
+}
