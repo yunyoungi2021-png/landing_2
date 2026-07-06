@@ -223,9 +223,15 @@ img { max-width: 100%; display: block; }
   max-width: var(--max-w);
   margin: -114px auto 0;
   padding: 0 24px 80px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  /* 카드들을 왼쪽부터 순서대로 정렬 */
+  justify-content: flex-start;
+  
+  /* 간격 유지 */
   gap: 14px;
+  
+  /* 화면이 작아질 경우를 대비해 필요시 줄바꿈 허용 */
+  flex-wrap: wrap; 
 }
 /* .info-card 앞에 점(.)을 추가하여 클래스 선택자로 수정 */
 .info-card {
