@@ -1,6 +1,7 @@
-// js/main.js
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. 모든 섹션과 네비게이션 링크를 가져옵니다.
+  /* =========================================
+     1. 스티키 네비게이션 스크롤 감지
+  ========================================= */
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".subnav__list li");
 
@@ -29,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 각 섹션을 관찰 대상으로 지정
   sections.forEach((section) => observer.observe(section));
-});
-document.addEventListener("DOMContentLoaded", () => {
- /* =========================================
-     2. 커리큘럼 드롭다운 기능 (수정됨)
+
+
+  /* =========================================
+     2. 커리큘럼 드롭다운 기능
   ========================================= */
   // 드롭다운 열기/닫기 토글
   document.querySelectorAll(".dropdown-header").forEach(header => {
@@ -69,10 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 4. 선택 완료 후 드롭다운 메뉴 닫기
       dropdown.classList.remove("is-open");
-    });
-  });
-});
-      item.classList.add("is-selected");
     });
   });
 });
